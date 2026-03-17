@@ -1,20 +1,324 @@
-{% load static tailwind_tags %}
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Django Tailwind</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    {% tailwind_css %}
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Oakwood Academy | Empowering Leaders of Tomorrow</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1152d4",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
 </head>
-
-<body class="bg-gray-50 text-black font-serif leading-normal tracking-normal">
-
-<div class="container mx-auto">
-    <section class="flex items-center justify-center h-screen">
-        <h1 class="text-5xl">Django + Tailwind = ❤️</h1>
-    </section>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 px-6 md:px-20 py-4 bg-white dark:bg-slate-900 sticky top-0 z-50">
+<div class="flex items-center gap-3">
+<div class="text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl">school</span>
 </div>
-</body>
-</html>
+<h2 class="text-slate-900 dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">Oakwood Academy</h2>
+</div>
+<div class="hidden lg:flex flex-1 justify-end gap-8 items-center">
+<div class="flex items-center gap-8">
+<a class="text-slate-700 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">About</a>
+<a class="text-slate-700 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Academics</a>
+<a class="text-slate-700 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Admissions</a>
+<a class="text-slate-700 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Campus Life</a>
+</div>
+<button class="flex min-w-[120px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold tracking-[0.015em] hover:bg-primary/90 transition-all">
+<span class="truncate">Contact Us</span>
+</button>
+</div>
+<!-- Mobile Menu Icon (Visual Only) -->
+<div class="lg:hidden">
+<span class="material-symbols-outlined text-slate-900 dark:text-white">menu</span>
+</div>
+</header>
+<main class="flex-1">
+<!-- Hero Section -->
+<div class="px-6 md:px-20 py-12 md:py-20">
+<div class="max-w-[1280px] mx-auto">
+<div class="flex flex-col gap-10 lg:flex-row lg:items-center">
+<div class="flex flex-col gap-8 lg:w-1/2">
+<div class="flex flex-col gap-4">
+<h1 class="text-slate-900 dark:text-white text-4xl md:text-6xl font-black leading-tight tracking-[-0.033em]">
+                                        Empowering the Leaders of Tomorrow
+                                    </h1>
+<p class="text-slate-600 dark:text-slate-400 text-lg md:text-xl font-normal leading-relaxed max-w-[600px]">
+                                        Dedicated to academic excellence and nurturing future-ready students in a modern, inclusive learning environment.
+                                    </p>
+</div>
+<div class="flex flex-wrap gap-4">
+<button class="flex min-w-[160px] cursor-pointer items-center justify-center rounded-lg h-14 px-8 bg-primary text-white text-base font-bold hover:shadow-lg hover:shadow-primary/30 transition-all">
+                                        Apply Now
+                                    </button>
+<button class="flex min-w-[160px] cursor-pointer items-center justify-center rounded-lg h-14 px-8 bg-primary/10 text-primary text-base font-bold hover:bg-primary/20 transition-all">
+                                        Learn More
+                                    </button>
+</div>
+</div>
+<div class="lg:w-1/2">
+<div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Modern architectural university campus building with glass windows" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAWjsVxtx71pTzL3Vwu_liwahO_xK7c-5L-ttWhORtHQEdW9QcEOqYWUiUCn38SB_NU-gjQP8WBe2CDDIX7tpAPvw_lr-dISYNmlO0i86lrsVh8sjAGQV7-36_zaOKrVomiaPtvvVlMpovAeXkzwkWvGpD5Rp3HTTCA0-59tIXRe7y36FB-FU0tNTobpzytzi9u6EpdgRZejsQr_n3AkVMWNIN26pxsyrpzCvrhi2fNALz5fbxqOdQvRPoN8UwiP3T-_1UbvkjOT6Q2');"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Programs Section -->
+<section class="bg-white dark:bg-slate-900/50 py-20 px-6 md:px-20">
+<div class="max-w-[1280px] mx-auto">
+<div class="flex flex-col items-center text-center mb-16">
+<h2 class="text-slate-900 dark:text-white text-3xl md:text-4xl font-bold mb-4">Our Academic Programs</h2>
+<p class="text-slate-600 dark:text-slate-400 max-w-2xl">Tailored learning paths designed to challenge and inspire students at every stage of their educational journey.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="flex flex-col gap-6 rounded-xl border border-slate-200 dark:border-slate-800 bg-background-light dark:bg-slate-900 p-8 hover:border-primary/50 transition-colors group">
+<div class="bg-primary/10 text-primary size-14 rounded-lg flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all">
+<span class="material-symbols-outlined text-3xl">child_care</span>
+</div>
+<div class="flex flex-col gap-3">
+<h3 class="text-slate-900 dark:text-white text-xl font-bold">Early Years</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">A nurturing environment for our youngest learners to explore, play, and develop social skills through guided discovery.</p>
+</div>
+<a class="text-primary font-bold text-sm flex items-center gap-2 mt-auto" href="#">Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<!-- Card 2 -->
+<div class="flex flex-col gap-6 rounded-xl border border-slate-200 dark:border-slate-800 bg-background-light dark:bg-slate-900 p-8 hover:border-primary/50 transition-colors group">
+<div class="bg-primary/10 text-primary size-14 rounded-lg flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all">
+<span class="material-symbols-outlined text-3xl">menu_book</span>
+</div>
+<div class="flex flex-col gap-3">
+<h3 class="text-slate-900 dark:text-white text-xl font-bold">Primary School</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">Building strong foundations in literacy, numeracy, and critical thinking with a focus on holistic personal growth.</p>
+</div>
+<a class="text-primary font-bold text-sm flex items-center gap-2 mt-auto" href="#">Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<!-- Card 3 -->
+<div class="flex flex-col gap-6 rounded-xl border border-slate-200 dark:border-slate-800 bg-background-light dark:bg-slate-900 p-8 hover:border-primary/50 transition-colors group">
+<div class="bg-primary/10 text-primary size-14 rounded-lg flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all">
+<span class="material-symbols-outlined text-3xl">history_edu</span>
+</div>
+<div class="flex flex-col gap-3">
+<h3 class="text-slate-900 dark:text-white text-xl font-bold">Secondary School</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">Rigorous academic standards preparing students for top-tier higher education and future global leadership roles.</p>
+</div>
+<a class="text-primary font-bold text-sm flex items-center gap-2 mt-auto" href="#">Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Oakwood? Section -->
+<section class="py-20 px-6 md:px-20">
+<div class="max-w-[1280px] mx-auto">
+<div class="flex flex-col gap-16 lg:flex-row">
+<div class="lg:w-1/3 flex flex-col gap-6">
+<h2 class="text-slate-900 dark:text-white text-4xl font-bold leading-tight">Why Choose Oakwood Academy?</h2>
+<p class="text-slate-600 dark:text-slate-400 text-lg">We provide more than just an education; we provide a platform for life-long success and impact.</p>
+<div class="mt-4">
+<div class="flex items-center gap-4 py-3 border-b border-slate-200 dark:border-slate-800">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="font-medium">98% University Acceptance</span>
+</div>
+<div class="flex items-center gap-4 py-3 border-b border-slate-200 dark:border-slate-800">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="font-medium">12:1 Student-Teacher Ratio</span>
+</div>
+<div class="flex items-center gap-4 py-3">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="font-medium">25+ Extracurricular Clubs</span>
+</div>
+</div>
+</div>
+<div class="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="p-8 bg-white dark:bg-slate-900 rounded-2xl shadow-sm">
+<span class="material-symbols-outlined text-4xl text-primary mb-4">groups</span>
+<h3 class="text-xl font-bold mb-2">Expert Faculty</h3>
+<p class="text-slate-600 dark:text-slate-400">Our educators are industry leaders and passionate mentors dedicated to each student's success.</p>
+</div>
+<div class="p-8 bg-white dark:bg-slate-900 rounded-2xl shadow-sm">
+<span class="material-symbols-outlined text-4xl text-primary mb-4">lightbulb</span>
+<h3 class="text-xl font-bold mb-2">Innovative Curriculum</h3>
+<p class="text-slate-600 dark:text-slate-400">A future-proof curriculum that blends traditional values with cutting-edge technology and research.</p>
+</div>
+<div class="p-8 bg-white dark:bg-slate-900 rounded-2xl shadow-sm">
+<span class="material-symbols-outlined text-4xl text-primary mb-4">public</span>
+<h3 class="text-xl font-bold mb-2">Diverse Community</h3>
+<p class="text-slate-600 dark:text-slate-400">Join a vibrant, multicultural student body representing over 40 nationalities and cultures.</p>
+</div>
+<div class="p-8 bg-white dark:bg-slate-900 rounded-2xl shadow-sm">
+<span class="material-symbols-outlined text-4xl text-primary mb-4">workspace_premium</span>
+<h3 class="text-xl font-bold mb-2">Global Network</h3>
+<p class="text-slate-600 dark:text-slate-400">Access an exclusive alumni network spanning across major global industries and institutions.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Campus Life Gallery Section -->
+<section class="bg-white dark:bg-slate-900/50 py-20 px-6 md:px-20">
+<div class="max-w-[1280px] mx-auto">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="text-slate-900 dark:text-white text-3xl font-bold mb-2">Campus Life</h2>
+<p class="text-slate-600 dark:text-slate-400">Explore the vibrant activities and spaces at Oakwood Academy.</p>
+</div>
+<button class="hidden md:flex items-center gap-2 text-primary font-bold">
+                                View Full Gallery <span class="material-symbols-outlined">arrow_outward</span>
+</button>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="col-span-2 row-span-2 relative rounded-xl overflow-hidden aspect-[4/3] group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Students studying together in a modern library" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJF9nyMb9bzK5C9wOjIRnExKM-8zu5j43H5a_fIE1m3J9M0rWnNM6UuTeeqk9ZfhhCrtVkLI3DVkqJ5yIf6zzjmdI6O-F6JuLQQsDENtG9BAv2KESaB5pSRs9Bc6FJ07-lXifDqhuOvJl32CFnMIRfysCv-Ry03n0wf4y2Vyshgh_In7MKDdkgiqYROVvqSi6ljGhchmwBHyzy6XwufLCDBD9VlTnujoDJ9QCXEeFtd_Du4-BXqfAEqRgiIidcKxIPIrQ0FZmcpLL4"/>
+<div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+<p class="text-white font-bold">Collaborative Learning Spaces</p>
+</div>
+</div>
+<div class="relative rounded-xl overflow-hidden aspect-square group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Students in a chemistry laboratory" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBK4Tnr2xwu5gEuhmesJkJnD8ROoG2o6ab1JM0bI7T6OQStZP8blYzPyGHiLbZY7LozVYXyu6pxKYPGawUdsbRmECnktemRcp_2oSOuojeZkJEQVRHDt_S6F01fhZj678qZkoUERLIa9qFHVfsVaH5FXXYP_BbDmidcz6RzvLzw6M8qYNk8O7FS4CKt20mUtU-DG5IcrJa57gCm9_pw1BWzbTfU-w1gSpoVtXz_bIFPZG4-TVSGiCCzmHmBtolW0XsHk1iBZUd9tp0P"/>
+<div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+<p class="text-white text-xs font-bold">STEM Research Labs</p>
+</div>
+</div>
+<div class="relative rounded-xl overflow-hidden aspect-square group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Students participating in a team-building exercise outdoors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJD2ZTXTGh8vP6-9q7XU-HxM-YM1iI0nkGct5LkdGJGuZGvGV3oAAf_NQFHHO8d5HUe_3j3YKHKdELBo-SxUy1nFlYEkJrbqTDU1YCjgU6_gQnOfoGr4wPi1dC2Rs00l9rgxdb5yWpm8-wh5mjbzRh63tT8jKJIzK-U-AjP0KrB4iY65DNPms6BLut9S9ElptoaqmUV_LRKmKIrjtHj7fSoGFw4vUVv48jTZ3P_kFIXTOm4mhzBsv-IWhaxRADPYNHSJeZmbOpZKzE"/>
+<div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+<p class="text-white text-xs font-bold">Outdoor Leadership</p>
+</div>
+</div>
+<div class="relative rounded-xl overflow-hidden aspect-square group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Athletes playing soccer on a green field" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwMVRCckYwes7mwyo6PN_4K0H0ol_ir0eZ-3K4kNkWnsig4jYRDXreVHzrBrlUQIfM1vWlGmz6ThnYnufICb37-g_VlgTDjsoSDrY0ca8bjpddH9y3IckcRWKkYgfl23JGRS1_rQbxULC7S1YOTb7-tZ0wOyhXAuigJnqlJLRgeWF2gJ7--XufvVznw51kf33p2LxgXNmcJyrOzo2TtYgaKoT7xAFvZjrP3PZlKRLmM81-5tAItCCRFi7j_wA-S4Nl4zE8MKjx4D2D"/>
+<div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+<p class="text-white text-xs font-bold">Competitive Athletics</p>
+</div>
+</div>
+<div class="relative rounded-xl overflow-hidden aspect-square group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Students performing in a theater production" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBetuWVlY8495N_sh7P4Xag2TrtKXb7d6q-03_brZcmiFJzz9mobj5TkL0xTOzcItOelmRkjKxB1azG4TYhKs-cBKrJRwt7zHvX_W6hnGrQrpVMtD6yycI7dqv17ZbXShwV8XxtZUyzjgI89PP6pgAaD39PKfbhtV0EQ19YotiihT05NM0m1RHmbSDrTo4l8TtuX6obgN4Uu62-jmeacCggEwYC15Iagdc4lID1XfSpkRx-IRYPYVpqzf7FO_oZsUIKVrXPKp7pYTtR"/>
+<div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+<p class="text-white text-xs font-bold">Performing Arts</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-20 px-6 md:px-20 text-center">
+<div class="max-w-[1280px] mx-auto bg-primary rounded-3xl p-12 md:p-20 text-white relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-32 -mt-32"></div>
+<div class="absolute bottom-0 left-0 w-48 h-48 bg-white/10 rounded-full -ml-24 -mb-24"></div>
+<div class="relative z-10">
+<h2 class="text-3xl md:text-5xl font-black mb-6">Ready to join our community?</h2>
+<p class="text-lg md:text-xl mb-10 opacity-90 max-w-2xl mx-auto">Applications are now open for the 2024 academic year. Take the first step towards a bright future.</p>
+<div class="flex flex-wrap justify-center gap-4">
+<button class="bg-white text-primary px-10 py-4 rounded-lg font-bold text-lg hover:bg-slate-100 transition-all">Start Application</button>
+<button class="bg-primary/20 border border-white/30 text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-white/10 transition-all">Schedule a Tour</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-900 text-slate-300 py-16 px-6 md:px-20 border-t border-slate-800">
+<div class="max-w-[1280px] mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+<div class="flex flex-col gap-6">
+<div class="flex items-center gap-3">
+<div class="text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl">school</span>
+</div>
+<h2 class="text-white text-xl font-bold">Oakwood Academy</h2>
+</div>
+<p class="text-sm leading-relaxed">Nurturing excellence and empowering the next generation of global citizens through innovative education and traditional values.</p>
+<div class="flex gap-4">
+<a class="size-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">social_leaderboard</span>
+</a>
+<a class="size-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">camera</span>
+</a>
+<a class="size-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">alternate_email</span>
+</a>
+</div>
+</div>
+<div class="flex flex-col gap-6">
+<h3 class="text-white font-bold">Quick Links</h3>
+<div class="flex flex-col gap-4 text-sm">
+<a class="hover:text-primary transition-colors" href="#">Our Story</a>
+<a class="hover:text-primary transition-colors" href="#">Faculty &amp; Staff</a>
+<a class="hover:text-primary transition-colors" href="#">Admission Process</a>
+<a class="hover:text-primary transition-colors" href="#">Scholarships</a>
+<a class="hover:text-primary transition-colors" href="#">School Calendar</a>
+</div>
+</div>
+<div class="flex flex-col gap-6">
+<h3 class="text-white font-bold">Academics</h3>
+<div class="flex flex-col gap-4 text-sm">
+<a class="hover:text-primary transition-colors" href="#">Curriculum Overview</a>
+<a class="hover:text-primary transition-colors" href="#">Special Education</a>
+<a class="hover:text-primary transition-colors" href="#">Language Programs</a>
+<a class="hover:text-primary transition-colors" href="#">E-Learning Portal</a>
+<a class="hover:text-primary transition-colors" href="#">Library Resources</a>
+</div>
+</div>
+<div class="flex flex-col gap-6">
+<h3 class="text-white font-bold">Contact Info</h3>
+<div class="flex flex-col gap-4 text-sm">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span>123 Academy Way, Oakwood Heights,<br/>London, UK SW1 2AB</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">call</span>
+<span>+44 20 1234 5678</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">mail</span>
+<span>admissions@oakwood.edu</span>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between gap-4 text-xs">
+<p>© 2024 Oakwood Academy. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="hover:text-white" href="#">Privacy Policy</a>
+<a class="hover:text-white" href="#">Terms of Service</a>
+<a class="hover:text-white" href="#">Cookie Policy</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</body></html>
